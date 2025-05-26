@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy a Tray of Eggs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .product-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .product-image {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        .price {
+            font-size: 20px;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Buy a Tray of Eggs</h1>
+        
+        <div class="product-info">
+            <img src="/mini_project_photos/tray-of-eggs.jpg" alt="Tray of Eggs" class="product-image">
+            <p class="price">Rs.180 per tray(30 eggs)</p>
+        </div>
+        
+        <form action="/submit-order" method="POST">
+            <label for="email">Subscriber Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <label for="quantity">Quantity:</label>
+            <select id="quantity" name="quantity" required>
+                <option value="1">1 Tray</option>
+                <option value="2">2 Trays</option>
+                <option value="3">3 Trays</option>
+                <option value="4">4 Trays</option>
+                <option value="5">5 Trays</option>
+            </select>
+
+            <label for="address">Delivery Address:</label>
+            <input type="text" id="address" name="address" required placeholder="Enter your delivery address">
+
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="credit-card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank-transfer">Bank Transfer</option>
+                <option value="cash-on-delivery">Cash on Delivery</option>
+            </select>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egg Production Management</title>
+    <link rel="stylesheet" href="EPM.css">
+</head>
+<body>
+    <header>
+        <h1>Egg Production Management</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#statistics">Statistics</a></li>
+            <li><a href="#nutrition">Nutrition</a></li>
+            <li><a href="#management">Management</a></li>
+            <li><a href="#" id="subscription-btn">Subscribe</a></li>
+        </ul>
+    </nav>
+    
+        <section id="introduction">
+            <h2>What is Egg Production ?</h2>
+            <img src="chicken in the farm.jpg" class="img-fluid">
+            <p>Egg production refers to the process of raising hens (female chickens) primarily for the purpose of producing eggs for human consumption. This process involves managing the environment, feeding, and health of the hens to ensure a consistent and safe supply of eggs.</p>
+            <h3>Vital Roles of Egg Production:</h3>
+            <ul>
+                <li>Nutritional Value: Eggs are an inexpensive yet rich source of high-quality protein, vitamins, and minerals.</li>
+                <li>Economic Importance: For many farmers, egg production is a key income source.</li>
+                <li>Sustainability: Compared to other protein sources like meat, egg production is relatively efficient.</li>
+            </ul>
+        </section>
+
+        <section id="process">
+            <h2>Egg Production Process</h2>
+                <div class="process-grid">
+                    <div class="process-item">
+                        <img src="Breeding.png" alt="Breeding" class="img-fluid">
+                        <h4>Breeding</h4>
+                        <p>Hens are selectively bred for high-quality egg production.</p>
+                    </div>
+                    <div class="process-item">
+                        <img src="Feeding.png" alt="Feeding" class="img-fluid">
+                        <h4>Feeding</h4>
+                        <p>Hens are fed a nutritious diet essential for strong eggshells.</p>
+                    </div>
+                    <div class="process-item">
+                        <img src="Organic Eggs(nutrition).jpg" alt="Housing" class="img-fluid">
+                        <h4>Housing</h4>
+                        <p>Providing comfortable and safe housing for hens.</p>
+                    </div>
+                    <div class="process-item">
+                        <img src="Collection.png" alt="Collection" class="img-fluid">
+                        <h4>Collection</h4>
+                        <p>Regular collection of eggs to ensure freshness.</p>
+                    </div>
+                </div>
+        </section>
+
+        <section id="statistics">
+            <h2>Egg Production Statistics</h2>
+            <div class="stats-container">
+                <!-- Left: Table Content -->
+                <div class="stats-content">
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Number of Eggs Produced (Billion)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>2018</td><td>80</td></tr>
+                            <tr><td>2019</td><td>83</td></tr>
+                            <tr><td>2020</td><td>86</td></tr>
+                            <tr><td>2021</td><td>89</td></tr>
+                            <tr><td>2022</td><td>92</td></tr>
+                            <tr><td>2023</td><td>95</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Right: Image -->
+                <div class="stats-image">
+                    <img src="statistics.png" alt="Egg Production" />
+                </div>
+            </div>
+        </section>
+
+        <section id="nutrition">
+            <h2>Egg Types and Nutrition</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type of Egg</th>
+                        <th>Calories</th>
+                        <th>Protein (g)</th>
+                        <th>Fat (g)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Cage-Free Egg</td><td>70</td><td>6</td><td>5</td></tr>
+                    <tr><td>Free-Range Egg</td><td>75</td><td>6.3</td><td>5.5</td></tr>
+                    <tr><td>Organic Egg</td><td>70</td><td>6.5</td><td>4.5</td></tr>
+                    <tr><td>Enriched Colony Egg</td><td>65</td><td>6.1</td><td>4.8</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="management">
+            <h2>Management and Best Practices</h2>
+            <p>Successful egg production requires careful management practices including:</p>
+            <ul>
+                <li>Regular health checks of hens.</li>
+                <li>Maintaining a clean and safe environment.</li>
+                <li>Providing a balanced diet to meet nutritional needs.</li>
+                <li>Monitoring egg production for quality and quantity.</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <div class="social-media">
+            <p style="color: black;">connect with:</p><a href="https://facebook.com" target="_blank">facebook</a>
+            <a href="https://twitter.com" target="_blank">twitter</a>
+            <a href="https://instagram.com" target="_blank">instagram</a>
+        </div>
+    </footer>
+
+    <div id="popup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="login-form">
+                <h2>Login</h2>
+                <form onsubmit="login(event)">
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" required><br>
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" required><br><br>
+                    <button type="submit">Login</button>
+                    <button type="button" onclick="toggleRegister()">Create Account</button>
+                </form>
+            </div>
+            <div id="register-form" style="display: none;">
+                <h2>Create an Account</h2>
+                <form onsubmit="subscribe(event)">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required><br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required><br>
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" required><br><br>
+                    <button type="submit">Subscribe</button>
+                    <button type="button" onclick="toggleRegister()">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="EPM.js"></script>
+</body>
+</html>
